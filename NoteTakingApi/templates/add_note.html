@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+
+  <div class="container">
+    <div class="jumbotron">
+        <h1>Add notes here</h1>
+        <form method="post" action="">
+          {% csrf_token %}
+          <div class="field">
+            {{ note_form.as_p}}
+          </div>
+          <button type="submit" >Submit</button>
+        </form>
+    </div>
+  </div>
+
+{% endblock %}
